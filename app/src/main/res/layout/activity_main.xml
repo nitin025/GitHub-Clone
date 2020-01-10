@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activityMain"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:focusableInTouchMode="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".controller.MainActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/searchbar"
+        android:layout_margin="5dp"
+        android:layout_height="40dp">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="330dp"
+            android:layout_height="40dp"
+            android:id="@+id/l1"
+            >
+
+        <EditText
+            android:layout_width="330dp"
+            android:layout_height="40dp"
+            android:hint="Username"
+            android:id="@+id/etUsername"
+            android:inputType="text" />
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnSearch"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="6dp"
+            android:layout_toRightOf="@+id/l1"
+            android:background="@drawable/search" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/rlDetails"
+        android:layout_below="@id/searchbar"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/rlProfile"
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+            <ImageView
+                android:layout_marginLeft="10dp"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:background="@drawable/load"
+                android:id="@+id/ivAvatar"/>
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvLogin"
+                android:textSize="20sp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:layout_toEndOf="@+id/ivAvatar"/>
+
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_below="@id/tvLogin"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/logoLocation"
+                android:layout_toRightOf="@+id/ivAvatar"
+                android:background="@drawable/location" />
+            <TextView
+                android:textSize="15sp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/tvLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:id="@+id/tvLocation"
+                android:layout_toRightOf="@+id/logoLocation"/>
+
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_below="@id/logoLocation"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/logoCompany"
+                android:layout_toRightOf="@+id/ivAvatar"
+                android:background="@drawable/company" />
+            <TextView
+                android:textSize="15sp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/tvLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:id="@+id/tvCompany"
+                android:layout_toRightOf="@+id/logoCompany"/>
+
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_below="@id/logoCompany"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/logoUrl"
+                android:layout_toRightOf="@+id/ivAvatar"
+                android:background="@drawable/link" />
+            <TextView
+                android:textSize="15sp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/tvCompany"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:id="@+id/tvHtmlUrl"
+                android:layout_toRightOf="@+id/logoCompany"/>
+
+        </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_below="@id/rlProfile"
+            android:id="@+id/tvBio"
+            android:layout_margin="10dp"
+            android:textSize="15sp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_below="@id/tvBio"
+            android:id="@+id/tvFollowers"
+            android:textColor="#000000"
+            android:layout_marginLeft="10dp"
+            android:text="Followers"
+            android:layout_marginBottom="5dp"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="7dp"
+            android:textSize="15sp"
+            android:background="#c9c7c7"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+            android:paddingBottom="3dp"
+            android:id="@+id/tvFollowCount"
+            android:layout_toRightOf="@id/tvFollowers"
+            android:layout_above="@id/tvFollowingCount"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_below="@id/tvFollowers"
+            android:id="@+id/tvFollowing"
+            android:textColor="#000000"
+            android:layout_marginLeft="10dp"
+            android:text="Following"
+            android:layout_marginBottom="5dp"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:textSize="15sp"
+            android:background="#c9c7c7"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+            android:paddingBottom="3dp"
+            android:id="@+id/tvFollowingCount"
+            android:layout_toRightOf="@id/tvFollowers"
+            android:layout_above="@id/tvRepoCount"/>
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_below="@id/tvFollowing"
+            android:id="@+id/tvRepositories"
+            android:textColor="#000000"
+            android:layout_marginLeft="10dp"
+            android:text="Repositories"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="15sp"
+            android:background="#c9c7c7"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+            android:paddingBottom="3dp"
+            android:id="@+id/tvRepoCount"
+            android:layout_toRightOf="@id/tvRepositories"
+            android:layout_above="@id/list_item"/>
+
+        <ListView
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/tvRepositories"
+            android:id="@+id/list_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </ListView>
+
+
+    </RelativeLayout>
+
+
+
+
+
+</RelativeLayout>
